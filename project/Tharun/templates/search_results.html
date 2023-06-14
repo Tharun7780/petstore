@@ -1,0 +1,13 @@
+<h1>Search Results</h1>
+<p>Your search query: {{ query }}</p>
+
+<ul>
+  {% for course in courses %}
+    <li>{{ course.cname }} - {{ course.cdur }} - {{ course.cprice }}</li>
+  {% empty %}
+    <li>No courses found.</li>
+  {% endfor %}
+</ul>
+
+
+   

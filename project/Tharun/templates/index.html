@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- {% include "header.html" %}
+    
+    <h1>Dashboard</h1>
+     {{x}}
+    {{y}}
+    {% if x < y %}
+    <i>{{y}} is greater</i>
+    {% else %}
+    <i>{{x}} is greater</i>
+    {% endif %}  -->
+    
+   <!-- <p>list:{{l}}</p> 
+   {% for x in l %}
+   {{x}}<br>
+   {% endfor %}
+
+
+   <p>tuple:{{t}}</p>
+    {% for y in t %}
+    {{y}}<br>
+    {% endfor %}
+
+    <p>sets:{{s}}</p>
+    {% for z in s %}
+    {{z}}<br>
+    {% endfor %}
+<table border="1">
+    <tr>
+        <th>keys</th>
+        <td>values</td>
+    </tr>
+    {% for a,b in d.items %}
+    <tr>
+        <td>{{a}}</td>
+        <td>{{b}}</td>
+    </tr>{% endfor %}
+
+</table> -->
+
+    <!-- <p>dictionary:{{d}}</p>
+    {% for a,b in d.items %}
+    {{a}}&nbsp;&nbsp;&nbsp;&nbsp;{{b}}<br>
+    {% endfor %} -->
+
+    <!-- {% include "footer.html" %}  -->
+    <h1>Name is: {{name}}</h1>
+    <h1>Name's length:{{name|length}}</h1>
+    <h1>Name in upper:{{name|upper}}</h1>
+    <h1>Name in lower:{{name|lower}}</h1>
+    <h1>Currentdatetime is:{{cdt}}</h1>
+    <p>{{cdt|date:"d/m/y"}}</p>
+    <p>{{cdt|date:"d-m-y"}}</p>
+    <p>{{cdt|date:"D M Y"}}</p>
+    <p>{{cdt|date:"D F Y"}}</p>
+    <p style="color:darkorchid">{{cdt|date:"d-F-Y"}}</p>
+
+</body>
+
+
+</html>

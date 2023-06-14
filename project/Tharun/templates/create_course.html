@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+</head>
+<body>
+    {% extends 'base.html' %}
+{% block data %}    
+    <div class="container">
+        <!-- Content here -->
+        <form style="font-size:40px;" method="post" action="/create_course">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Course Name</label>
+              <input type="text"  name="cname">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Course Duration</label>
+             <input type="number" name="cdur">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect2">Course Price</label>
+            <input type="number" name="cprice">
+            </div>
+<!--             
+            <div class="form-group">
+                <input type="submit" name="same" value="create_course">
+            </div>
+          </form>
+        {% endblock data %} -->
+      </div>
+</body>
+</html>
+
+<!-- <form method="post" action="/create_course">
+    {% csrf_token %}
+    
+    <table>
+        <tr>
+            <th>course name</th>
+            <td><input type="text" name="cname"></td>
+        </tr>
+        <tr>
+            <th>course duration</th>
+            <td><input type="text"name="cdur"></td>
+        </tr>
+        <tr>
+            <th>course price</th>
+            <td><input type="number"name="cprice"></td>
+        </tr>
+        <tr>
+           <th><input type="submit" name="same" value="create_course"></th> 
+        </tr>
+    </table>
+
+</form> -->

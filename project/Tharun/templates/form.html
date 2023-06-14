@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block data %}
+<form method="post" action="/formsubmit">
+    {% csrf_token %}
+    
+    <table>
+        <tr>
+            <th>Mobile No:</th>
+            <td><input type="number" name="mn"></td>
+        </tr>
+        <tr>
+            <th>Feedback:</th>
+            <td><textarea name="feedback" rows="5" cols="30"></textarea></td>
+        </tr>
+        <tr>
+           <th><input type="submit" name="same" value="post"></th> 
+        </tr>
+    </table>
+
+</form>
+{% endblock data %}

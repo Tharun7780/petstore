@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block data %}
+<h1>Admin Dashboard for course</h1>
+
+{% include 'searchform.html' %}
+<table border="1">
+    <tr>
+        <th>SL No</th>
+        <th>Course Name</th>
+        <th>Course Duration</th>
+        <th>Course price</th>
+        <th>Edit
+        <th>Delete</th>    
+        </th>
+    </tr>
+    {% for d in data %}
+    <tr>
+        <td>{{d.id}}</td>
+        <td>{{d.cname}}</td>
+        
+        <td>{{d.cdur}}</td>
+        <td>{{d.cprice}}</td>
+        <td><a href="/edit/{{d.id}}">{{"Edit"}}</a></td>
+        <td><a href="/delete/{{d.id}}">{{"delete"}}</a></td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="/course">Create course</a>
+
+{% endblock data %}
